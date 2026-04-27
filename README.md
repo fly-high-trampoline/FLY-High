@@ -1,2 +1,2 @@
 # FLY-High
-Fly High Trampoline &amp; Adventure Park - Booking &amp; Payment System
+Fly High Trampoline &amp; Adventure Park
