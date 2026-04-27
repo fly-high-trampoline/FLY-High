@@ -1,134 +1,282 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fly High Adventure Park</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fly High Adventure Park</title>
 
-  <style>
-    body { margin:0; font-family: Arial; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    header {
-      background:black;
-      color:white;
-      display:flex;
-      justify-content:space-between;
-      padding:15px 20px;
-      align-items:center;
-    }
+<style>
 
-    header h2 { color:orange; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-    nav a {
-      color:white;
-      margin:0 10px;
-      text-decoration:none;
-    }
+body{background:#000;color:#fff;}
 
-    .hero {
-      background:url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e');
-      background-size:cover;
-      color:white;
-      text-align:center;
-      padding:100px 20px;
-    }
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+background:#000;
+position:sticky;
+top:0;
+z-index:100;
+}
 
-    .hero h1 { font-size:40px; }
+nav h2{color:orange;}
 
-    .btn {
-      background:orange;
-      padding:12px 25px;
-      color:white;
-      border:none;
-      border-radius:10px;
-      font-size:18px;
-    }
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#fff;
+}
 
-    .section {
-      padding:50px;
-      text-align:center;
-    }
+.btn{
+background:orange;
+padding:10px 20px;
+border-radius:8px;
+}
 
-    .cards {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
+/* HERO */
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1607968565043-36af90dde238') center/cover no-repeat;
+display:flex;
+align-items:center;
+padding:50px;
+}
 
-    .card {
-      width:250px;
-      margin:15px;
-      padding:20px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.2);
-    }
+.hero-text h1{
+font-size:60px;
+}
 
-    .card img {
-      width:100%;
-      border-radius:10px;
-    }
+.hero-text span{color:orange;}
 
-    footer {
-      background:black;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
-  </style>
+.hero-text p{margin:20px 0;}
+
+.buttons a{
+margin-right:10px;
+}
+
+/* INFO BAR */
+.info{
+display:flex;
+justify-content:space-around;
+background:#111;
+padding:20px;
+margin-top:-50px;
+border-radius:20px;
+}
+
+/* SECTION */
+.section{padding:60px 40px;text-align:center;}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.card{
+background:#111;
+border-radius:15px;
+width:250px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{transform:scale(1.05);}
+
+.card img{width:100%;height:160px;object-fit:cover;}
+
+.card h3{margin:10px 0;}
+
+/* PRICING */
+.price-box{
+border:1px solid orange;
+padding:30px;
+border-radius:15px;
+width:250px;
+}
+
+.price-box h1{color:orange;}
+
+/* BOOKING */
+input,select{
+width:80%;
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:none;
+}
+
+footer{
+background:#111;
+padding:30px;
+text-align:center;
+}
+
+/* NEON EFFECT */
+.neon{
+color:#fff;
+text-shadow:0 0 10px orange,0 0 20px orange;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <h2>FLY HIGH</h2>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Activities</a>
-    <a href="#">Pricing</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+<!-- NAV -->
+<nav>
+<h2>FLY HIGH</h2>
+<div>
+<a href="#">Home</a>
+<a href="#">Activities</a>
+<a href="#">Pricing</a>
+<a href="#">Contact</a>
+<a class="btn">Book Now</a>
+</div>
+</nav>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Fly High Adventure Park</h1>
-  <p>Jump • Play • Enjoy 🚀</p>
-  <button class="btn">Book Now</button>
+<div class="hero-text">
+<h1>JUMP. PLAY. <span>ENJOY.</span></h1>
+<p>Premium Indoor Adventure Park Experience</p>
+
+<div class="buttons">
+<a class="btn">Book Now</a>
+<a class="btn" style="background:black;border:1px solid orange;">Explore</a>
 </div>
 
+</div>
+</div>
+
+<!-- INFO -->
+<div class="info">
+<div>📍 Sundernagar</div>
+<div>⏰ 10AM–9PM</div>
+<div>📞 +91 70095 20440</div>
+</div>
+
+<!-- ABOUT -->
 <div class="section">
-  <h2>Our Activities</h2>
-
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
-      <h3>Trampoline</h3>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1593642532400-2682810df593">
-      <h3>Gaming Zone</h3>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698">
-      <h3>Ninja Course</h3>
-    </div>
-  </div>
+<h2 class="neon">Our Setup</h2>
+<p>
+Black PEB Structure • Neon Lighting • AC Hall<br>
+2 Mezzanine Floors • Rooftop Restaurant (Lake View)
+</p>
 </div>
 
+<!-- ACTIVITIES -->
 <div class="section">
-  <h2>Pricing</h2>
-  <p>Weekday ₹300/hr | Weekend ₹400/hr</p>
+<h2>Activities</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce">
+<h3>Trampoline</h3>
+<p>Black mats + Red strips</p>
 </div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092335878-9d9ff86ca2bf">
+<h3>Foam Pit</h3>
+<p>Black & Red cubes</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584467735871-8b08b0d0a1c5">
+<h3>Ninja Course</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81">
+<h3>Gaming Zone</h3>
+</div>
+
+</div>
+</div>
+
+<!-- BUILDING -->
 <div class="section">
-  <h2>Contact</h2>
-  <p>Sundernagar, Himachal Pradesh</p>
-  <p>📞 +91 XXXXX XXXXX</p>
+<h2>Our Facility</h2>
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" width="90%">
 </div>
 
+<!-- PRICING -->
+<div class="section">
+<h2>Pricing</h2>
+
+<div class="cards">
+
+<div class="price-box">
+<h3>Weekday</h3>
+<h1>₹499/hr</h1>
+<p>All Activities Included</p>
+</div>
+
+<div class="price-box">
+<h3>Weekend</h3>
+<h1>₹699/hr</h1>
+<p>All Activities Included</p>
+</div>
+
+</div>
+</div>
+
+<!-- BOOKING -->
+<div class="section">
+<h2>Online Booking</h2>
+
+<form onsubmit="payNow(event)">
+<input type="text" placeholder="Name" required><br>
+<input type="tel" placeholder="Mobile"><br>
+
+<select>
+<option>1 Hour</option>
+<option>2 Hours</option>
+<option>3 Hours</option>
+</select><br>
+
+<select>
+<option>Weekday</option>
+<option>Weekend</option>
+</select><br>
+
+<button class="btn">Pay & Book</button>
+</form>
+
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Fly High Adventure Park</p>
+<p>© Fly High Adventure Park</p>
 </footer>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+function payNow(e){
+e.preventDefault();
+
+var options={
+key:"rzp_test_xxxx",
+amount:49900,
+currency:"INR",
+name:"Fly High Adventure Park",
+handler:function(){
+alert("Booking Confirmed!");
+}
+};
+
+var rzp=new Razorpay(options);
+rzp.open();
+}
+</script>
 
 </body>
 </html>
