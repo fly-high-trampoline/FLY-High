@@ -111,4 +111,8 @@ app.get("/admin/bookings", async (req,res)=>{
   res.json(data);
 });
 
-app.listen(5000,()=>console.log("Server running"));
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
