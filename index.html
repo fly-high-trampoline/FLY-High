@@ -5,56 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial;
+    body { margin:0; font-family: Arial; }
+
+    header {
+      background:black;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      padding:15px 20px;
+      align-items:center;
+    }
+
+    header h2 { color:orange; }
+
+    nav a {
+      color:white;
+      margin:0 10px;
+      text-decoration:none;
     }
 
     .hero {
-      background: linear-gradient(black, orange);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
+      background:url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e');
+      background-size:cover;
+      color:white;
+      text-align:center;
+      padding:100px 20px;
     }
 
+    .hero h1 { font-size:40px; }
+
     .btn {
-      background: orange;
-      padding: 10px 20px;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
+      background:orange;
+      padding:12px 25px;
+      color:white;
+      border:none;
+      border-radius:10px;
+      font-size:18px;
     }
 
     .section {
-      padding: 40px;
-      text-align: center;
+      padding:50px;
+      text-align:center;
+    }
+
+    .cards {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .card {
+      width:250px;
+      margin:15px;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width:100%;
+      border-radius:10px;
+    }
+
+    footer {
+      background:black;
+      color:white;
+      text-align:center;
+      padding:20px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <h1>Fly High Adventure Park</h1>
-    <p>Jump • Play • Enjoy 🚀</p>
-    <button class="btn">Book Now</button>
-  </div>
+<header>
+  <h2>FLY HIGH</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Activities</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-  <div class="section">
-    <h2>Our Activities</h2>
-    <p>Trampoline • Gaming • Ninja Course</p>
-  </div>
+<div class="hero">
+  <h1>Fly High Adventure Park</h1>
+  <p>Jump • Play • Enjoy 🚀</p>
+  <button class="btn">Book Now</button>
+</div>
 
-  <div class="section">
-    <h2>Pricing</h2>
-    <p>Weekday ₹300/hr | Weekend ₹400/hr</p>
-  </div>
+<div class="section">
+  <h2>Our Activities</h2>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Sundernagar, Himachal Pradesh</p>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+      <h3>Trampoline</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1593642532400-2682810df593">
+      <h3>Gaming Zone</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698">
+      <h3>Ninja Course</h3>
+    </div>
   </div>
+</div>
+
+<div class="section">
+  <h2>Pricing</h2>
+  <p>Weekday ₹300/hr | Weekend ₹400/hr</p>
+</div>
+
+<div class="section">
+  <h2>Contact</h2>
+  <p>Sundernagar, Himachal Pradesh</p>
+  <p>📞 +91 XXXXX XXXXX</p>
+</div>
+
+<footer>
+  <p>© 2026 Fly High Adventure Park</p>
+</footer>
 
 </body>
 </html>
